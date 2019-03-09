@@ -5,16 +5,20 @@
     .header
       .left-header
         .left-header__title
+        = @group.name
         .left-header__members
+          Members:
+          - @group.users.pluck(:name).each do |user|
+            = user
       .right-header
-        .right-header__button
-      .messages
-        = render @messages
-  .form
-    = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .form__mask
-        = f.label :image, class: 'form__mask__image' do
-          = fa_icon 'picture-o', class: 'icon'
-          = f.file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'form__submit'
+        = link_to "Edit", edit_group_path(params[:group_id]), class: 'btn'
+    .messages
+      = render @messages
+    .form
+      = form_with model: [@group, @message], id: 'new_message' do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
