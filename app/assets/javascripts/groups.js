@@ -1,6 +1,6 @@
-$(function(){
-  var user_list = $("#user_search_result");
-  var member_list = $("#member_search_result");
+$(document).on('turbolinks:load', function(){
+  var user_list = $("#user-search-result");
+  var member_list = $("#member-search-result");
 
   function appendUsers(user) {
     var html =`<div class="chat-group-user clearfix">
@@ -23,27 +23,30 @@ $(function(){
     member_list.append(html);
   }
 
-  $(".chat-group-form__input").on("keyup", function() {
+  $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
-    $.ajax({
-      type: 'GET',
-      url: '/users',
-      data: { keyword: input },
-      dataType: 'json'
-    })
+      if (input.length > 0){
+        $.ajax({
+          type: 'GET',
+          url: '/users',
+          data: { keyword: input },
+          dataType: 'json'
+        })
 
-
-    .done(function(members) {
-      $("#user_search_result").empty();
-        if (members.length !== 0) {
-          members.forEach(function(user){
-            appendUsers(user);
-          })
-        }
-      })
-    .fail(function() {
-     alert('ユーザー検索に失敗しました');
-    });
+      .done(function(members) {
+        $("#user-search-result").empty();
+          if (members.length !== 0) {
+            members.forEach(function(user){
+              appendUsers(user);
+            })
+          }
+        })
+      .fail(function() {
+       alert('ユーザー検索に失敗しました');
+      });
+    }else{
+      $("#user-search-result").empty();
+    }
   });
 
   $(document).on("click", '.user-search-add', function() {

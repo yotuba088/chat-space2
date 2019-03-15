@@ -24,6 +24,7 @@
       }
     }
     .right-header {
+      .btn {
       border: 1px solid $light_blue;
       color: $light_blue;
       float: right;
@@ -31,7 +32,6 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      .btn {
       color: $light_blue;
       text-decoration: none;
       }
@@ -43,6 +43,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100vh - 100px - 90px);
+    overflow: scroll;
     .message {
       .upper-message {
         display: flex;

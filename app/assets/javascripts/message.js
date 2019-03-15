@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(message){
     var insertImage = '';
     if (message.image) {
@@ -16,8 +16,8 @@ $(function(){
       					  <div class="lower-message">
       				      <p class="lower-message__content">
       				        ${message.content}
-                      ${insertImage}
       				      </p>
+                    ${insertImage}
       					  </div>
       					</div>`;
   	return html;
@@ -39,9 +39,15 @@ $(function(){
       processData: false,
       contentType: false,
     })
+
     .done(function(message){
-      var html = buildHTML(message);
-      $('.messages').append(html);
+      if (!($.isEmptyObject(message))){
+        var html = buildHTML(message);
+        $('.messages').append(html);
+      }else{
+        alert('メッセージを入力してください');
+      }
+
       $("#new_message")[0].reset();
       $('.form__submit').prop('disabled',false);
       scroll();
@@ -52,7 +58,7 @@ $(function(){
   })
 
   var interval = setInterval(function(){
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    if (window.location.href.match(/\/groups\/\d+\/messages/) && !($('.message').length == 0)) {
       var last_message_id = $('.message:last').data('message_id');
       $.ajax({
         url: location.href.json,
@@ -62,7 +68,7 @@ $(function(){
       })
 
       .done(function(messages){
-        if ($.isEmptyObject(messages) == false){
+        if (!($.isEmptyObject(messages))){
           messages.forEach(function(message){
             var html = buildHTML(message);
             $('.messages').append(html);
@@ -71,7 +77,7 @@ $(function(){
         }
       })
 
-      .fail(function(json){
+      .fail(function(messages){
         alert('自動更新に失敗しました');
       });
     }else{
