@@ -10,33 +10,32 @@ $ rails -v Rails 5.2.2
 2019/03/01-03/16
 
 group_users table
-Column	Type	Options
 user_id	references	null :false, foreign_key :true
 group_id	references	null :false, foreign_key :true
-Association
+### Association
 belongs_to :user
 belongs_to :group
-messages table
-Column	Type	Options
+
+## messages table
 content	text	
 image	string	
 user_id	references	null :false, foreign_key :true
 group_id	references	null :false, foreign_key :true
-Association
+### Association
 belongs_to :user
 belongs_to :group
-users table
-Column	Type	Options
+
+## users table
 name	string	null :false, unique :true
 email	string	null :false, unique :true
-Association
+### Association
 has_many :messages
 has_many :group_users
 has_many :group, through::group_users
-groups table
-Column	Type	Options
+
+## groups table
 name	string	null :false, unique :true, index
-Association
+### Association
 has_many :messages
 has_many :group_users
 has_many :users through::group_users
