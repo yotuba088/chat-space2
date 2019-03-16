@@ -9,7 +9,7 @@ $ rails -v Rails 5.2.2
 # Development Period
 2019/03/01-03/16
 
-group_users table
+## group_users table
 user_id	references	null :false, foreign_key :true
 group_id	references	null :false, foreign_key :true
 ### Association
