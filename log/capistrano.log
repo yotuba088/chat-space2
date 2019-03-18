@@ -332,3 +332,23 @@ While it's not a problem now, it could cause errors if you change the version of
  DEBUG [7abcc758] Finished in 0.390 seconds with exit status 1 (failed).
   INFO [9d97f34b] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/chat-space2/shared/bundle --jobs 4 --without development test --deployment --quiet as ec2-user@52.196.110.132
  DEBUG [9d97f34b] Command: cd /var/www/chat-space2/releases/20190316092926 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.5.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/chat-space2/shared/bundle --jobs 4 --without development test --deployment --quiet )
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-03-16 18:34:27 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [71a858e2] Running [ -d $HOME/.rbenv/versions/2.5.1 ] as ec2-user@52.196.110.132
+ DEBUG [71a858e2] Command: [ -d $HOME/.rbenv/versions/2.5.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-03-16 18:34:58 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [358df738] Running [ -d $HOME/.rbenv/versions/2.5.1 ] as ec2-user@52.196.110.132
+ DEBUG [358df738] Command: [ -d $HOME/.rbenv/versions/2.5.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-03-16 18:35:58 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [11eb6385] Running [ -d $HOME/.rbenv/versions/2.5.1 ] as ec2-user@52.196.110.132
+ DEBUG [11eb6385] Command: [ -d $HOME/.rbenv/versions/2.5.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-03-16 18:49:55 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [7df01f09] Running [ -d $HOME/.rbenv/versions/2.5.1 ] as ec2-user@52.196.110.132
+ DEBUG [7df01f09] Command: [ -d $HOME/.rbenv/versions/2.5.1 ]
