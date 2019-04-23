@@ -19,6 +19,7 @@ chat-space is chat app (Tech Expert curriculum)
 
 ## group_users TB
 | Column | Type | Options |
+|:-----------|------------:|:------------:|
 | user_id | references | null :false, foreign_key :true |
 | group_id | references | null :false, foreign_key :true |
 
