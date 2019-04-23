@@ -28,6 +28,7 @@ chat-space is chat app (Tech Expert curriculum)
 
 ## messages TB
 | Column | Type | Options |
+|:-----------|------------:|:------------:|
 | content |	text | -- |
 | image | string | -- |
 | user_id | references | null :false, foreign_key :true |
@@ -38,6 +39,7 @@ chat-space is chat app (Tech Expert curriculum)
 
 ## users TB
 | Column | Type | Options |
+|:-----------|------------:|:------------:|
 | name | string | null :false, unique :true |
 | email | string | null :false, unique :true |
 
@@ -47,6 +49,7 @@ chat-space is chat app (Tech Expert curriculum)
 
 ## groups TB
 | Column | Type | Options |
+|:-----------|------------:|:------------:|
 | name | string | null :false, unique :true, index |
 
 - has_many :messages
