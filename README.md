@@ -11,8 +11,8 @@ chat-space is chat app (Tech Expert curriculum)
 - インクリメンタルサーチ機能
 
 # Requirement
-$ ruby -v 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
-$ rails -v Rails 5.2.2
+- Ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
+- Rails 5.2.2
 
 # Development Period
 2019/03/01-03/16
