@@ -18,6 +18,7 @@ chat-space is chat app (Tech Expert curriculum)
 2019/03/01-03/16
 
 ## group_users TB
+| Column | Type | Options |
 | user_id | references | null :false, foreign_key :true |
 | group_id | references | null :false, foreign_key :true |
 
@@ -25,8 +26,9 @@ chat-space is chat app (Tech Expert curriculum)
 - belongs_to :group
 
 ## messages TB
-| content |	text |
-| image | string |
+| Column | Type | Options |
+| content |	text | -- |
+| image | string | -- |
 | user_id | references | null :false, foreign_key :true |
 | group_id | references | null :false, foreign_key :true |
 
@@ -34,6 +36,7 @@ chat-space is chat app (Tech Expert curriculum)
 - belongs_to :group
 
 ## users TB
+| Column | Type | Options |
 | name | string | null :false, unique :true |
 | email | string | null :false, unique :true |
 
@@ -42,6 +45,7 @@ chat-space is chat app (Tech Expert curriculum)
 - has_many :group, through::group_users
 
 ## groups TB
+| Column | Type | Options |
 | name | string | null :false, unique :true, index |
 
 - has_many :messages
