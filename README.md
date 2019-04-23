@@ -2,50 +2,6 @@
 writer yotuba088
 
 # Description
-FS47b is Melcari clone app created by Tech Expert 47b(Contributors)
-
-
-
-# Requirement
-- ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
-- Rails 5.2.2.1
-
-# Development Period
-- 2019/03/27-04/19 team
-- 4/21- 
-
-# Database
-## users TB
-
-| Column | Type | Options |
-|:-----------|------------:|:------------:|
-| nickname | string | null: false |
-| email | string | null: false, unique: true |
-| last_name | string | -- |
-| first_name | string | -- |
-| last_name_kana | string | -- |
-| first_name_kana | string | -- |
-| city | string | -- |
-| block | string | -- |
-| building | string | -- |
-| birth_year | integer | -- |
-| birth_month | integer | -- |
-| birth_day | integer | -- |
-| phone_number | string | -- |
-| zipcode | string | -- |
-| prefecture | integer | -- |
-
-- has_many :items
-- has_many :trading_partners
-- has_many :sns_credentials
-- has_many :credit_cards
-
-
-
-# README
-writer yotuba088
-
-# Description
 chat-space is chat app (Tech Expert curriculum)
 
 # Features
