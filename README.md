@@ -1,22 +1,22 @@
 # README
-writer yotuba088
+## Description(まとめ)
+Ruby on Railsで作成したポートフォリオ用チャットアプリです。
 
-# Description
-chat-space is chat app (Tech Expert curriculum)
-
-# Features
+## Features(機能一覧)
 - ユーザー新規登録・ログイン機能
 - 非同期通信によるメッセージ投稿
 - チャットグループ作成・編集・削除
 - インクリメンタルサーチ機能
 
-# Requirement
+## Requirement
 - Ruby 2.5.1p57 (2018-03-29 revision 63029) [x86_64-darwin18]
 - Rails 5.2.2
+- Haml/Scss/Javascript/Jquery
 
-# Development Period
+## Development Period
 2019/03/01-03/16
 
+# Database
 ## group_users TB
 | Column | Type | Options |
 |:-----------|------------:|:------------:|
